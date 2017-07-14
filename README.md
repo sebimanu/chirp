@@ -12,3 +12,5 @@ Features to be implemented:
 Nice to have:
 1. ReChirp
 2. Post a photo
+
+Mockups: https://app.moqups.com/cristianca/X5PafO2Mro/view
