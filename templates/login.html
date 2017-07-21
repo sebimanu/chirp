@@ -2,18 +2,52 @@
 {% block content %}
 <form method="post" class="register-form">
     {% csrf_token %}
-    {{ form.non_field_errors }}
-    <p>
-        <label for="id_username">Username:</label>
-        <input type="text" name="username" autofocus maxlength="254" required id="id_username"/>
-        {{ form.username.errors }}
-    </p>
-    <p>
-        <label for="id_password">Password:</label>
-        <input type="password" name="password" required id="id_password"/>
-        {{ form.password.errors }}
-    </p>
 
-    <button type="submit">Login</button>
+    		<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	               <!--<div class="panel-title text-center">
+	               		<h1 class="title">Chirp</h1>
+	               		<hr />
+	               	</div>-->
+	            </div>
+				<div class="main-login main-center">
+                    <div class="log">
+                        <h4>Login</h4>
+                    </div>
+					<form class="form-horizontal" method="post" action="#">
+						<div class="form-group">
+                            <div class="error">{{ form.non_field_errors }}</div>
+							<label for="username"  class="cols-sm-2 control-label">Username</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-user" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="username" id="username"  placeholder="Enter your Username"/>
+                                    {{ form.username.errors }}
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="glyphicon glyphicon-lock" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+                                    {{ form.password.errors }}
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<button type="submit" class="btn btn-lg btn-succes btn-block login-button">Sign in</button>
+						</div>
+						<div class="login-register">
+				            <a href="{% url 'register' %}">Create account</a> or <a href="reset_password.php">reset password</a>
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>
 </form>
 {% endblock %}
