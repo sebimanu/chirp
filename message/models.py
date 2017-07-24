@@ -7,7 +7,6 @@ class TimestampModel(models.Model):
         abstract = True
     created = models.DateTimeField(auto_now_add=True)
 
-
 class Message(TimestampModel):
     user = models.ForeignKey(User)
     status = models.TextField(null=False, max_length=140, blank=False)
@@ -15,12 +14,10 @@ class Message(TimestampModel):
     def __str__(self):
         return self.status
 
-
 class Like(TimestampModel):
     user = models.ForeignKey(User)
     message =models.ForeignKey(Message)
     like = models.BooleanField()
-
 
 class Follow(TimestampModel):
     followed_user = models.ForeignKey(User, related_name='followed_by')

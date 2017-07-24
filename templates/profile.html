@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+
+    <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <span class="glyphicon glyphicon-user profile-icon" aria-hidden="true"></span>
+                {% if request.user != object %}
+                <button type="submit" class="btn btn-succes buton">Follow</button><br>
+                {% endif %}
+                <span><a href = {% url 'my-profile' %}>@{{ object.username }}</span></a><br>
+                <span class="bawld">{{ object.first_name }} {{ object.last_name }}</span><br>
+                <span class="marleft">{{ object.email }}</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-9">
+        <ul class="nav nav1 nav-tabs">
+            <li role="presentation" class="active"><a href="#">Chirps</a></li>
+            <li role="presentation"><a href="#">Following</a></li>
+            <li role="presentation"><a href="#">Followers</a></li>
+            <li role="presentation"><a href="#">Chirp</a></li>
+        </ul>
+
+        {% for message in chirps %}
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="row chirp martop">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p>
+                                {% if user == message.user %}
+                                    <span class="label label-primary username"><a class="a2" href = {% url 'my-profile' %}>@{{ message.user.username }}</a></span>
+                                {% else %}
+                                    <span class="label label-default username"><a class="a2" href = {% url 'my-profile' %}>@{{ message.user.username }}</a></span>
+                                {% endif %}
+                                <small>{{ message.created }}</small>
+                            </p>
+                            <p>{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+{% endblock %}

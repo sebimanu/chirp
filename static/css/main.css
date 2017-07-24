@@ -1,8 +1,13 @@
 h2 {
     color: red;
 }
-.register-form {
-    margin-top: 200px;
+
+.register-form{
+    margin-top:200px;
+}
+
+.error-field {
+    border-color: red;
 }
 
 .chirp {
@@ -14,99 +19,101 @@ h2 {
 }
 
 .row-container {
-margin-top: 100px;
+    margin-top: 100px;
 }
 
-.error-field {
-    border-color: red;
+.mar {
+    margin-top: -100px;
 }
 
-/*
-/* Created by Filipe Pina
- * Specific styles of signin, register, component
- */
-/*
- * General styles
- */
-
-body, html{
-     height: 100%;
- 	background-repeat: no-repeat;
- 	background-color: #d3d3d3;
- 	font-family: 'Oxygen', sans-serif;
+.marnav {
+    margin-top: 0px;
+    margin-right: 0px;
 }
 
-.main{
- 	margin-top: -100px;
+.lr {
+    margin-top: 8px;
+    margin-right: 18px;
 }
 
-h1.title {
-	font-size: 50px;
-	font-family: 'Passion One', cursive;
-	font-weight: 400;
+.errorcolor{
+    color: red;
+    font-weight: bold;
+    text-align: left;
 }
 
-hr{
-	width: 10%;
-	color: #fff;
+.profile-icon {
+    padding: 20px;
+    border: 1px solid #383838;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 30px;
 }
 
-.form-group{
-	margin-bottom: 15px;
+body {
+  background-image: url('http://i.imgur.com/Cj1RRYU.jpg') ;
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 0 50px;
+    background-attachment: fixed;
 }
 
-label{
-	margin-bottom: 15px;
+.container[role=main] {
+    margin-top: 75px;
 }
 
-input,
-input::-webkit-input-placeholder {
-    font-size: 11px;
-    padding-top: 3px;
+.martop{
+    margin-top: 5px;
+    margin-bottom: -10px;
 }
 
-.main-login{
- 	background-color: #fff;
-    /* shadows and rounded borders */
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    border-color:#D3D3D3;
-
+.marchirp{
+    margin-top: 10px;
+    margin-bottom: -15px;
 }
 
-.main-center{
- 	margin-top: 30px;
- 	margin: 0 auto;
- 	max-width: 330px;
-    padding: 40px 40px;
+.right{
+    width: 90px;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-left: 13px;
+    padding: 10px;
+}
+
+.a2{
+    color:white;
+    font-weight: bold;
 
 }
 
-.login-button{
-	margin-top: 5px;
-	background-color:#00FF00;
-	color:white;
+.a2:hover {
+    color:white;
+    text-decoration: none;
 }
 
-.login-register{
-	font-size: 11px;
-	text-align: center;
-
-
-}
-.error{
-    color:red;
-    font-weight:bold;
+a:hover {
+    text-decoration: none;
 }
 
-.log{
-    background-color:#D3D3D3;
-    color:gray;
-   
+.bawld{
+    font-weight: bold;
+}
 
+.marleft{
+    margin-right: 10px;
+}
 
+.panel-body  {
+    word-break:break-all
+}
+
+.ac{
+    color:white;
+    font-weight: bold;
+}
+
+.buton{
+    background-color:#32CD32;
+    color:white;
 }
