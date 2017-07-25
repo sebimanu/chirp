@@ -45,11 +45,11 @@
             </div>
         <div class="collapse navbar-collapse">
             <div class="nav navbar-nav navbar-right marnav">
-                {%  if user.is_authenticated %}
+                {%  if request.user.is_authenticated %}
                     <li class="dropdown marnav" type="none">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span>
-                            <strong>{{ user }}</strong>
+                            <strong>{{ request.user }}</strong>
                             <span class="glyphicon glyphicon-chevron-down"></span>
                         </a>
                         <ul class="dropdown-menu">

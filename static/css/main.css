@@ -51,7 +51,7 @@ h2 {
 }
 
 body {
-  background-image: url('http://i.imgur.com/Cj1RRYU.jpg') ;
+  background-image: url('http://3.bp.blogspot.com/-xkQjwgqu5O8/UVDfCjWqpMI/AAAAAAAAIOc/PkzJuuODaz8/s1600/dark-blue-abstract-wallpapers-backgrounds-for-powerpoint.jpg') ;
   background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -116,4 +116,8 @@ a:hover {
 .buton{
     background-color:#32CD32;
     color:white;
+}
+
+.navvv li a {
+    color:#fff;
 }
