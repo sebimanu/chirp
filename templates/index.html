@@ -6,10 +6,10 @@
         <form method="post" action="{% url 'chirp' %} object.username">
             {% csrf_token %}
             <input type="hidden" name="user" value="{{ request.user.id }}">
-            <label for="id_status">Status:</label>
-            <input type="text" name="status" maxlength="140" id="id_status" class="{% if from.status.errors %} error-field{% endif %}"/>
+            <label for="id_status" class="l">Add chirp:</label>
+            <input type="text" name="status" maxlength="140" id="id_status" class="{% if from.status.errors %} error-field{% endif %} in"/>
         {{ form.status.errors }}
-            <button type="submit" class="btn btn-primary">Chirp</button>
+            <button type="submit" class="btn btn-primary butchi">Chirp</button>
         </form>
     {% endif %}
 
@@ -27,6 +27,12 @@
                             <small>{{ message.created }}</small>
                         </p>
                         <p>{{ message }}</p>
+                     <button class="like-message" data-messageid="{{ message.id }}"{% if request.user in message.like_users %}style="color:green"{% endif %}>
+                         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                     </button>
+                     <button class="dislike-message" data-messageid="{{ message.id }}" {% if request.user in message.dislike_users %}style="color:red"{% endif %}>
+                         <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+                     </button>
                     </div>
                 </div>
             </div>
